@@ -1,0 +1,30 @@
+{
+  "runner": {
+    "type": "docker-json-runner",
+    "metadata": {
+      "image": "computes/fibonacci-sum-split:latest"
+    }
+  },
+  "result": {
+    "action": "set",
+    "destination": {
+      "dataset": { "/": "<dataset-hash-here>" },
+      "path": "split/results"
+    }
+  },
+  "conditions": [
+    {
+      "name": "Create Map tasks",
+      "condition":
+        "exist(dataset(hpcp('<dataset-hash-here>/split/results'))) && !exist(dataset(hpcp('<dataset-hash-here>/map/results')))",
+      "taskDefinition": {
+        "/": "<map-task-definition-hash-here>"
+      },
+      "action": "map",
+      "source": {
+        "dataset": { "/": "<dataset-hash-here>" },
+        "path": "split/results"
+      }
+    }
+  ]
+}

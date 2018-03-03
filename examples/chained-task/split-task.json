@@ -1,0 +1,11 @@
+{
+  "input": {
+    "dataset": 2
+  },
+  "taskDefinition": {
+    "/": "<split-task-definition-hash-here>"
+  },
+  "status": {
+    "/": "<split-status-hash-here>"
+  }
+}

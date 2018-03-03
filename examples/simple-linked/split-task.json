@@ -1,0 +1,11 @@
+{
+  "input": {
+    "dataset": 2
+  },
+  "taskDefinition": {
+    "/": "<task-definition-hash-here>"
+  },
+  "status": {
+    "/": "<status-hash-here>"
+  }
+}

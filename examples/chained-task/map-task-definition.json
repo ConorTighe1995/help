@@ -1,0 +1,15 @@
+{
+  "runner": {
+    "type": "docker-json-runner",
+    "metadata": {
+      "image": "computes/fibonacci-sum-map:latest"
+    }
+  },
+  "result": {
+    "action": "append",
+    "destination": {
+      "dataset": { "/": "<dataset-hash-here>" },
+      "path": "map/results"
+    }
+  }
+}
