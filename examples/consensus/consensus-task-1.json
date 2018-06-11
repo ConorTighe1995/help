@@ -1,0 +1,27 @@
+{
+  "input": {
+    "dataset": 2
+  },
+  "taskDefinition": {
+    "runner": {
+      "type": "docker-json-runner",
+      "metadata": {
+        "image": "computes/fibonacci-sum-split:latest"
+      }
+    },
+    "result": {
+      "action": "set",
+      "destination": {
+        "dataset": { "/": "<dataset-hash-here>" },
+        "path": "split/results"
+      },
+      "consensus": {
+        "threshold": 2
+      }
+    }
+  },
+  "status": {
+    "/": "<status-hash-here>"
+  },
+  "id": 1
+}
