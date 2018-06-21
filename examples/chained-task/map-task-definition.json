@@ -1,8 +1,10 @@
 {
   "runner": {
     "type": "docker-json-runner",
-    "metadata": {
-      "image": "computes/fibonacci-sum-map:latest"
+    "manifest": {
+      "*": {
+        "image": "computes/fibonacci-sum-map:latest"
+      }
     }
   },
   "result": {
